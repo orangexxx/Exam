@@ -1,0 +1,18 @@
+<div>
+	<div class="time">剩余时间：{{minite}}:{{second}} </div>
+	<div class="tip">请从下面的问题中，选择一个和自己最切合的答案。</div>
+<ul class="exam-list">
+<li class="question" ng-repeat="question in questions">
+	<div>{{$index + 1}}, {{question.desc}}</div>
+	<div class="anwser" ng-repeat="anwser in question.anwsers" >
+	<input type="radio" value="{{$index}}" name="{{question.id}}" ng-model="question.result">
+	{{anwser}}
+</div>
+
+</input>
+</li>
+</ul>
+<div class="button_area">
+<input class="button" type="button" value="提交" ng-click="exam();">
+</div>
+</div>

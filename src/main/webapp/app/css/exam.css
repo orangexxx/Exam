@@ -1,0 +1,95 @@
+
+body {
+	font-family: Microsoft YaHei;
+	font-size: 12pt;
+	margin: 0;
+	background: #f3f3f3 url("../images/bg.jpg") center top no-repeat;
+}
+
+
+header {
+	height: 90px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.logo {
+	padding-top: 10px;
+}
+
+.index_title {
+	text-align: center;
+  	position: relative;
+  	top: -60px;
+  	font-size: 35pt;
+ 	font-family: LiSu;
+}
+
+.view-container{
+	width: 1000px;
+	min-height :800px;
+	margin: auto auto;
+	background-color: #ffffff;
+}
+
+.box{
+	width: 500px;
+	border: solid 1px #999999;
+	border-radius: 5px;
+	margin: 0px auto;
+	position: relative;
+	top: 50px;
+
+}
+
+.box_title {
+	background: url("../images/title_bg.gif");
+	text-align: center;
+	line-height: 35px;
+}
+
+.box_content {
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.button_area {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.button {
+	background: url("../images/button_bg.jpg");
+	width: 60px;
+	height: 23px;
+	margin: 0 10px;
+	border-radius: 5px;
+	border: solid 1px #fcfcfc;
+}
+
+.tip {
+	background: url("../images/title_bg.gif");
+	line-height: 35px;
+	padding-left: 15px;
+}
+.time {
+	line-height: 35px;
+	float: right;
+	margin-right: 20px;
+}
+.exam-list {
+	list-style: none;
+	padding: 0;
+}
+
+.question {
+	padding: 8px 30px;
+	border-bottom: 1px dashed #cccccc;
+}
+.anwser {
+	line-height: 30px;
+	margin-left: 20px;
+}
+.submit {
+	margin: 10px;
+}
