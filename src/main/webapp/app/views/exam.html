@@ -5,8 +5,8 @@
 <li class="question" ng-repeat="question in questions">
 	<div>{{$index + 1}}, {{question.desc}}</div>
 	<div class="anwser" ng-repeat="anwser in question.anwsers" >
-	<input type="radio" value="{{$index}}" name="{{question.id}}" ng-model="question.result">
-	{{anwser}}
+	<input type="radio" value="{{anwser.id}}" name="{{question.id}}" ng-model="question.result">
+	{{anwser.value}}
 </div>
 
 </input>

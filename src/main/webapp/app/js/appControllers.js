@@ -80,6 +80,19 @@
 		return true;
 	}
 
+	function shuffle (questions) {
+		questions.forEach(function (item) {
+			if (item.strict !== true) {
+				item.anwsers.sort(function (pre, next) {
+					return Math.random() - 0.5;
+				});
+			}
+		});
+		questions.sort(function (pre, next) {
+			return Math.random() - 0.5;
+		});
+	}
+
 	appControllers.controller("loginCtrl", ["$scope", "$http", "$location", function($scope, $http, $location) {
 		$scope.departments = window.departments;
 
@@ -170,10 +183,14 @@
 		};
 		$http.get("json/exam.json").success(function(data) {
 			$scope.questions = data;
+			shuffle($scope.questions);
 		});
 
 		$scope.exam = function() {
 			var result = "";
+			$scope.questions.sort(function (pre, next) {
+				return pre.id - next.id;
+			});
 			$scope.questions.forEach(function(item) {
 				if (item.result !== undefined) {
 					result += item.result;
